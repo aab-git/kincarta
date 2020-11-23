@@ -1,13 +1,17 @@
 package com.amazon.steps;
 
+import com.amazon.utilitiies.ConfigsReader;
+import com.amazon.utilitiies.Driver;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
+
+
 
 public class AlexaSteps {
 
     @Given("^the user navigates to \"([^\"]*)\" homepage$")
-    public void the_user_navigates_to_homepage(String arg1) throws Throwable {
-
+    public void the_user_navigates_to_homepage(String url) throws Throwable {
+        Driver.getDriver().navigate().to(ConfigsReader.getProperty(url));
     }
 
     @Given("^the user searches for \"([^\"]*)\"$")

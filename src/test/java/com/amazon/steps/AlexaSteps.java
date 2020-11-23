@@ -1,13 +1,16 @@
 package com.amazon.steps;
 
+import com.amazon.pages.Header;
 import com.amazon.utilitiies.ConfigsReader;
 import com.amazon.utilitiies.Driver;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
-
+import org.openqa.selenium.Keys;
 
 
 public class AlexaSteps {
+
+    Header headers = new Header();
 
     @Given("^the user navigates to \"([^\"]*)\" homepage$")
     public void the_user_navigates_to_homepage(String url) throws Throwable {
@@ -15,8 +18,8 @@ public class AlexaSteps {
     }
 
     @Given("^the user searches for \"([^\"]*)\"$")
-    public void the_user_searches_for(String arg1) throws Throwable {
-
+    public void the_user_searches_for(String alexa) throws Throwable {
+        headers.searchButton.sendKeys(alexa + Keys.ENTER);
     }
 
     @Given("^the user navigates to the second page$")

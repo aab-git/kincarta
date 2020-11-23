@@ -26,6 +26,13 @@ public class ResponsePage {
     @FindBy(xpath = "//a[@class='a-link-normal a-text-normal']")
     public List<WebElement> listOfAllItems;
 
+    @FindBy(xpath = "//input[@name='submit.add-to-cart']")
+    public WebElement addToCartButton;
+
+    @FindBy(xpath = "//button[@class=' a-button-close a-declarative']")
+    public WebElement popUpWindowCloseButton;
+
+
 
 
 }

@@ -6,19 +6,17 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class Header {
+public class ShoppingCartPage {
 
     WebDriver driver;
 
-    public Header () {
+    public ShoppingCartPage () {
         driver = Driver.getDriver();
+
         PageFactory.initElements(driver, this);
     }
+    @FindBy(xpath = "//span[@class='a-size-medium sc-product-title a-text-bold']")
+    public WebElement itemInCart;
 
-    @FindBy (xpath = "//input[@id='twotabsearchtextbox']")
-    public WebElement searchButton;
-
-    @FindBy(xpath = "//a[@id='nav-cart']")
-    public WebElement cartButton;
 
 }

@@ -6,6 +6,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.List;
+
 public class ResponsePage {
 
     WebDriver driver;
@@ -17,6 +19,12 @@ public class ResponsePage {
 
     @FindBy (xpath = "//li[@class='a-normal'][1]")
     public WebElement secondPageButton;
+
+    @FindBy (xpath = "//div[@data-index='2']")
+    public WebElement thirdElementOnTheSecondPage;
+
+    @FindBy(xpath = "//a[@class='a-link-normal a-text-normal']")
+    public List<WebElement> listOfAllItems;
 
 
 

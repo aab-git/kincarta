@@ -14,6 +14,8 @@ public class AlexaSteps {
     Header headers = new Header();
     ResponsePage responsePage = new ResponsePage();
 
+    String textOfThirdItem;
+
     @Given("^the user navigates to \"([^\"]*)\" homepage$")
     public void the_user_navigates_to_homepage(String url) throws Throwable {
         Driver.getDriver().navigate().to(ConfigsReader.getProperty(url));
@@ -31,7 +33,9 @@ public class AlexaSteps {
 
     @Given("^the user selects the third item$")
     public void the_user_selects_the_third_item() throws Throwable {
+        textOfThirdItem = responsePage.thirdElementOnTheSecondPage.getText();
 
+        responsePage.listOfAllItems.get(2).click();
     }
 
     @Then("^assert that the user would be able to add item to the cart$")

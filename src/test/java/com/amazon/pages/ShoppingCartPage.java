@@ -14,9 +14,9 @@ public class ShoppingCartPage {
         driver = Driver.getDriver();
 
         PageFactory.initElements(driver, this);
+
     }
     @FindBy(xpath = "//span[@class='a-size-medium sc-product-title a-text-bold']")
     public WebElement itemInCart;
-
 
 }

@@ -32,7 +32,4 @@ public class ResponsePage {
     @FindBy(xpath = "//button[@class=' a-button-close a-declarative']")
     public WebElement popUpWindowCloseButton;
 
-
-
-
 }

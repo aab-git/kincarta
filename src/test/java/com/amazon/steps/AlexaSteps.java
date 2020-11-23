@@ -54,5 +54,4 @@ public class AlexaSteps {
         Assert.assertTrue(textOfThirdItem.contains(textOfItemInCart));
     }
 
-
 }

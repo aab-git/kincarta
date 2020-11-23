@@ -9,11 +9,9 @@ import org.junit.runner.RunWith;
 
 @CucumberOptions (
         features = "src/test/resources/features",
-        dryRun = true,
+        dryRun = false,
         glue = "com.amazon.steps"
 )
 public class AlexaRunner {
-
-
 
 }

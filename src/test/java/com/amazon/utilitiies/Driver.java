@@ -14,13 +14,11 @@ public class Driver {
 
             if (browser.equals("firefox"))
                 driver = FirefoxDriver.loadFirefoxDriver();
-
             else
                 driver = ChromeDriver.loadChromeDriver();
         }
 
         return driver;
-
     }
     public static void closeDriver () {
         if (driver == null)

@@ -1,6 +1,7 @@
 package com.amazon.steps;
 
 import com.amazon.pages.Header;
+import com.amazon.pages.ResponsePage;
 import com.amazon.utilitiies.ConfigsReader;
 import com.amazon.utilitiies.Driver;
 import cucumber.api.java.en.Given;
@@ -11,6 +12,7 @@ import org.openqa.selenium.Keys;
 public class AlexaSteps {
 
     Header headers = new Header();
+    ResponsePage responsePage = new ResponsePage();
 
     @Given("^the user navigates to \"([^\"]*)\" homepage$")
     public void the_user_navigates_to_homepage(String url) throws Throwable {
@@ -24,7 +26,7 @@ public class AlexaSteps {
 
     @Given("^the user navigates to the second page$")
     public void the_user_navigates_to_the_second_page() throws Throwable {
-
+        responsePage.secondPageButton.click();
     }
 
     @Given("^the user selects the third item$")
